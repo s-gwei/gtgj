@@ -2,8 +2,7 @@ package com.sun.controller;
 
 import com.sun.pojo.StationVo;
 import com.sun.service.TrainQueryService;
-import com.sun.util.ResponseResult;
-import org.apache.coyote.Response;
+import com.sun.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,7 +24,7 @@ public class TrainQueryController {
 
     @GetMapping("/getAllCity")
     @ResponseBody
-    public ResponseResult getAllCity(){
+    public Result getAllCity(){
         List<StationVo> list = trainQueryService.getAllCity();
         return null;
     }
