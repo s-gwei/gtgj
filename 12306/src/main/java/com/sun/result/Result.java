@@ -1,4 +1,4 @@
-package com.sun.util;
+package com.sun.result;
 
 import lombok.Getter;
 import lombok.ToString;
@@ -18,6 +18,7 @@ public class Result<T> {
     private T data;
 
     private Result(ResultStatus resultStatus, T data) {
+        this.code = resultStatus.getCode();
         this.message = resultStatus.getMessage();
         this.data = data;
     }
